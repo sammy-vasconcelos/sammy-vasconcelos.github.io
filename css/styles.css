@@ -1,0 +1,86 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.game-board{
+    position: relative;
+    width: 100%;
+    height: 762px;
+    border: 5px solid #333;
+    background-image: linear-gradient(#3586b5, #eeeeee);
+    overflow: hidden;
+}
+
+.cat{
+    position: absolute;
+    width: 200px;
+    bottom: 0px;
+}
+
+.jump{
+    animation: jump-cat 0.5s ease-out;
+}
+
+.crystal{
+    position: absolute;
+    width: 200px;
+    bottom: 0px;
+    animation: crystal-animation 2s infinite linear ;
+}
+
+.nuvem{
+    position: absolute;
+    width: 400px;
+    animation: nuvem-move 5s infinite linear ;
+}
+
+.floor{
+    position: absolute;
+    width: 100rem;
+    bottom: -110px;
+    left: -30px;
+}
+
+@keyframes nuvem-move{
+    from{
+        right: -400px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump-cat{
+    0%{
+        bottom: 0px;
+    }
+    50%{
+        bottom: 250px;
+    }
+    60%{
+        bottom: 200px;
+    }
+    70%{
+        bottom: 180px;
+    }
+    80%{
+        bottom: 100px;
+    }
+    90%{
+        bottom: 30px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+
+@keyframes crystal-animation{
+    from{
+        right: -200px;
+    }
+    to{
+        right: 100%;
+    }
+}
